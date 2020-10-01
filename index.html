@@ -1,17 +1,40 @@
 <html>
 
 <head>
-
+ <link rel="stylesheet" href="Styles.css">
 
 </head>
 
-<body>
-    <h1>Cookie Clicker</h1>
-    
-    <p><img id= 'cookie' src="***ADD IMAGE***"></p>
-    <p id= 'cookieCount'></p>
+<body id = 'body'>
+    <h1>Cookie Clicker</h1> 
+    <button id = 'backgroundChangeButton'>Change Background</button>
+
+    <p id = 'multiplier'>Rate of Change: 1</p>
+    <p id = 'autoclickers' class = 'remove'>Number of Autoclickers: 0</p>
+
+    <p><img id= 'cookie' src="cookie.jpg" width = 200></p>
+    <p><img id= 'cookie2' src="cookie.jpg" width = 100 class='remove'></p>
+    <p><img id= 'cookie3' src="cookie.jpg" width = 50 class='hide'></p>
+    <p><img id= 'cookie4' src="cookie.jpg" width = 50 class='hide'></p>
+    <p><img id= 'cookie5' src="cookie.jpg" width = 50 class='hide'></p>
+    <p><img id= 'cookie6' src="cookie.jpg" width = 50 class='hide'></p>
+
+    <p id= 'score'>0</p>
+
     <Button id= 'showButton'> Show </Button>
     <Button id = 'removeButton'> Remove </Button>
+    <Button id = 'doublerButton' class="remove"> Double </Button>
+    <Button id = 'increaseButton' class="remove"> Increase </Button>
+    <Button id = 'cookie2Button' class="remove"> Second Cookie </Button>
+    <button id = 'autoclickerButton' class='remove'>Auto-Clicker</button>
+    <button id = 'movingCookieButton' class='remove'>~Moving Cookie~</button>
+
+    <p id='congrats' class='remove'></p>
+    <p id = 'message'></p>
+    <p id="log"></p>
+
+
+
 
     <script src="CookieClicker.js"></script>
 </body>
