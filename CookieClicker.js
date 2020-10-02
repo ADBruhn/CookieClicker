@@ -6,6 +6,7 @@ let cookie5El = document.getElementById ('cookie5')
 let cookie6El = document.getElementById ('cookie6')
 
 let cookieCount = 0
+let clickCount = 0
 let score = document.getElementById ('score')
 let countChange = 1
 let multiplier = document.getElementById ('multiplier')
@@ -27,6 +28,7 @@ let a = 0
 let x = 50
 let y = 10
 var z = Math.floor(Math.random() * 4)
+var v = getRandomInt ()
 let cookie2Yes = 0
 let movingCookieYes = 0
 let background = 0
@@ -34,9 +36,38 @@ let background = 0
 
 function clickedCookie () {
     console.log ('cookie clicked')
-    console.log (`Random number = ${z}`)
+    // console.log (`Random number = ${z}`)
     cookieCount = cookieCount + countChange
+    clickCount = clickCount + 1
     score.innerHTML = cookieCount
+
+    if (clickCount % 5 === 0) {
+        v = getRandomInt ()
+        // console.log (` random int = ${v}`)
+        if (v === 0) {
+            cookieEl.src = 'cookie0.jpg'
+        } else if (v === 1) {
+            cookieEl.src = 'cookie1.jpg'
+        } else if (v === 2) {
+            cookieEl.src = 'cookie2.jpg'
+        } else if (v === 3) {
+            cookieEl.src = 'cookie3.jpg'
+        } else if (v === 4) {
+            cookieEl.src = 'cookie4.jpg'
+        } else if (v === 5) {
+            cookieEl.src = 'cookie5.jpg'
+        } else if (v === 6) {
+            cookieEl.src = 'cookie6.jpg'
+            setTimeout(annoyingDog, 1000)
+            setTimeout(cookie, 1500)
+        } else if (v === 7) {
+            cookieEl.src = 'cookie7.jpg'
+        } else if (v === 8) {
+            cookieEl.src = 'cookie8.jpg'
+        } else if (v === 9) {
+            cookieEl.src = 'cookie9.jpg'
+        } 
+    }
  
     if (cookieCount === 10) {
         if (countChange === 1) {
@@ -197,6 +228,18 @@ function backgroundChange () {
         background = 0
         
     }
+}
+
+function getRandomInt () {
+    return Math.floor(Math.random() * 10);
+}
+
+function annoyingDog () {
+    cookieEl.src = 'AnnoyingDog.jpg'
+}
+
+function cookie () {
+    cookieEl.src = 'cookie6.jpg'
 }
 
 cookieEl.addEventListener ('click', clickedCookie)
